@@ -1,0 +1,78 @@
+/* Stylesheet SQLgrey Web Interface */
+
+* {
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.alert { color: red; }
+h1 { font-size: 20px; }
+h2 { font-size: 16px; }
+
+span.h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+span.h2 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+div#page {
+  width: 950px;
+  margin: auto;
+}
+
+div#table_awl {
+  width: 950px;
+  height: 418px;
+  overflow: auto;
+}
+
+div#table_con {
+  width: 950px;
+  height: 444px;
+  overflow: auto;
+}
+
+
+/* forms */
+input.txt { 
+  height: 15px;
+  width: 220px;
+}
+
+tr.datefld td input {
+  height: 15px;
+  width: 40px;
+}
+
+tr.datefld td input.btn {
+  height: 25px;
+  width: 60px;
+  font-size: 13px;
+}
+
+
+/* navigation */
+ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+ul li { display: inline; }
+
+ul li a, a.navlike {
+  padding: 0.2em 1em;
+  background-color: #ffa042;
+  color: #000;
+  text-decoration: none;
+  border-right: 1px solid #fff;
+}
+
+ul.navlist li a { float: left; }
+
+ul li a:hover, ul li #current, a.navlike:hover {
+  background-color: #000;
+  color: #fff;
+}
