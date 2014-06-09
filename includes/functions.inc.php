@@ -4,17 +4,23 @@
 SQLgrey Web Interface
 Filename:	awl.inc.php
 Purpose: 	Database and navigation and other functions
-Version: 	1.1.6
+Version: 	1.1.6-lcl
 ************************************************************/
 
 require "config.inc.php";
 
 // Globally used phrases.
 
-$dom_out = 'domains of recipients for whom messages are never greylisted';
-$email_out = 'e-mail addresses of recipients for whom messages are never greylisted';
-$dom_in = 'domains of recipients for whom messages are always greylisted unless they are in the optout domain table';
-$email_in = 'e-mail addresses of recipients for whom messages are always greylisted unless they are in the optout e-mail table';
+$dom_out = _('domains of recipients for whom messages are never greylisted');
+$email_out = _('e-mail addresses of recipients for whom messages are never greylisted');
+$dom_in = _('domains of recipients for whom messages are always greylisted unless they are in the optout domain table');
+$email_in = _('e-mail addresses of recipients for whom messages are always greylisted unless they are in the optout e-mail table');
+
+if (isSet($_GET["locale"]))
+    $locale = $_GET["locale"];
+putenv("LC_ALL=$locale");
+setlocale(LC_ALL, $locale);
+bindtextdomain("messages", "./locale");
 
 
 // Database functions.
@@ -23,17 +29,17 @@ function do_query($query) {
         global $db_hostname, $db_user, $db_pass, $db_db, $db_type;
         /* Connecting, selecting database */
 	if ($db_type == "mysql") {
-		$link = mysql_connect($db_hostname, $db_user, $db_pass) or die("Could not connect to database");
-		mysql_select_db($db_db) or die("Could not select database");
+		$link = mysql_connect($db_hostname, $db_user, $db_pass) or die(_("Could not connect to database"));
+		mysql_select_db($db_db) or die(_("Could not select database"));
 
-		$result = mysql_query($query) or die("Query failed");
+		$result = mysql_query($query) or die(_("Query failed"));
 
 		/* Closing connection */
 		mysql_close($link);
 	} else {
-		$link = pg_connect("host=$db_hostname dbname=$db_db user=$db_user password=$db_pass") or die("Could not connect to database");
+		$link = pg_connect("host=$db_hostname dbname=$db_db user=$db_user password=$db_pass") or die(_("Could not connect to database"));
 
-	        $result = pg_query($link, $query) or die("Query failed");
+	        $result = pg_query($link, $query) or die(_("Query failed"));
 
 		/* Closing connection */
 		pg_close($link);

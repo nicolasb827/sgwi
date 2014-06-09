@@ -38,4 +38,7 @@ $no_millisecs	= "yes";
 */
 //date_default_timezone_set('UTC');
 
+/* i18n */
+$locale = "en_GB";
+
 ?>
