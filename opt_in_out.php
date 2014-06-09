@@ -26,19 +26,19 @@ Version: 	1.1.6
 		case "del":
 			$entry = $_GET["field"];
 			if ($entry == '') {
-				$report = '<br />Nothing was entered.';
+				$report = '<br />'._("Nothing was entered.");
 			} else {
 				do_query("DELETE FROM ".$table." WHERE ".$field."='".addslashes($entry)."'");
-				$report = '<br />'.$entry.' deleted.';
+				$report = '<br />'.printf(_("%s deleted."),$entry);
 			}
 			break;
 		case "add":
 			$entry = $_POST[$field];
 			if ($entry == '') {
-				$report = '<br />Nothing was entered.';
+				$report = '<br />'._("Nothing was entered.");
 			} else {
 				do_query("INSERT INTO ".$table."(".$field.") VALUES('".addslashes(strtolower($entry))."')");
-				$report = '<br />'.$entry.' added.';
+				$report = '<br />'.printf(_("%s added."),$entry);
 			}
 			break;
 		case "":
@@ -48,7 +48,7 @@ Version: 	1.1.6
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="<?php echo $locale; ?>">
 
 <head>
 	<title><?php echo $title; ?></title>

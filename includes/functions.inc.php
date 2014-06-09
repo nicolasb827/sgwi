@@ -10,18 +10,16 @@ Version: 	1.1.6-lcl
 require "config.inc.php";
 
 // Globally used phrases.
+if (isSet($_GET["locale"]))
+	$locale = $_GET["locale"];
+putenv("LC_ALL=$locale");
+setlocale(LC_ALL, $locale);
+bindtextdomain("messages", "./locale");
 
 $dom_out = _('domains of recipients for whom messages are never greylisted');
 $email_out = _('e-mail addresses of recipients for whom messages are never greylisted');
 $dom_in = _('domains of recipients for whom messages are always greylisted unless they are in the optout domain table');
 $email_in = _('e-mail addresses of recipients for whom messages are always greylisted unless they are in the optout e-mail table');
-
-if (isSet($_GET["locale"]))
-    $locale = $_GET["locale"];
-putenv("LC_ALL=$locale");
-setlocale(LC_ALL, $locale);
-bindtextdomain("messages", "./locale");
-
 
 // Database functions.
 
@@ -67,30 +65,30 @@ function shownav($colour, $mode, $direction, $what) {
 		echo ('
 			<ul id="navlist">
 			  <li><a href="index.php">Main menu</a></li>
-			  <li><a href="connect.php" title="hosts/domains that are currently greylisted">Waiting (greylist)</a></li>
+			  <li><a href="connect.php" title="'._("hosts/domains that are currently greylisted") . '>'._("Waiting (greylist)").'</a></li>
 			  <li><a href="awl.php?mode=email"'.is_active1("email", $mode).
-				'title="auto-whitelisted e-mailadresses (that have passed greylisting)">E-mail addresses</a></li>
+				'title="'._("auto-whitelisted e-mailadresses (that have passed greylisting)").'">'._("E-mail addresses").'</a></li>
 			  <li><a href="awl.php?mode=domains"'.is_active1('domains', $mode).
-				'title="auto-whitelisted domains (that have passed greylisting)">Domains</a></li>
-			  <li><a href="opt_in_out.php?direction=out&amp;what=domain" title="&nbsp;'.$dom_out.'">Optout domain</a></li>
-			  <li><a href="opt_in_out.php?direction=out&amp;what=email" title="&nbsp;'.$email_out.'">Optout e-mail</a></li>
-			  <li><a href="opt_in_out.php?direction=in&amp;what=domain" title="&nbsp;'.$dom_in.'">Optin domain</a></li>
-			  <li><a href="opt_in_out.php?direction=in&amp;what=email" title="&nbsp;'.$email_in .'">Optin e-mail</a></li>
+				'title="'._("auto-whitelisted domains (that have passed greylisting)").'">Domains</a></li>
+			  <li><a href="opt_in_out.php?direction=out&amp;what=domain" title="&nbsp;'.$dom_out.'">'._("Optout domain").'</a></li>
+			  <li><a href="opt_in_out.php?direction=out&amp;what=email" title="&nbsp;'.$email_out.'">'._("Optout e-mail").'</a></li>
+			  <li><a href="opt_in_out.php?direction=in&amp;what=domain" title="&nbsp;'.$dom_in.'">'._("Optin domain").'</a></li>
+			  <li><a href="opt_in_out.php?direction=in&amp;what=email" title="&nbsp;'.$email_in .'">'._("Optin e-mail").'</a></li>
 			</ul>
 		');
 	} else {
 		// index and connect (with dummies) and opt_in_out.
 		echo ('
 			<ul id="navlist">
-			  <li><a href="index.php"'.is_active2("ind", $direction, "ind", $what).'>Main menu</a></li>
+			  <li><a href="index.php"'.is_active2("ind", $direction, "ind", $what).'>'._("Main menu").'</a></li>
 			  <li><a href="connect.php"'.is_active2("con", $direction, "con", $what).
-				'title="hosts/domains that are currently greylisted">Waiting (greylist)</a></li>
-			  <li><a href="awl.php?mode=email" title="auto-whitelisted e-mailadresses (that have passed greylisting)">E-mail addresses</a></li>
-			  <li><a href="awl.php?mode=domains" title="auto-whitelisted domains (that have passed greylisting)">Domains</a></li>
-			  <li><a href="opt_in_out.php?direction=out&amp;what=domain"'.is_active2("out", $direction, "domain", $what).' title="'.$dom_out.'">Optout domain</a></li>
-			  <li><a href="opt_in_out.php?direction=out&amp;what=email"'.is_active2("out", $direction, "email", $what).' title="'.$email_out.'">Optout e-mail</a></li>
-			  <li><a href="opt_in_out.php?direction=in&amp;what=domain"'.is_active2('in',$direction,'domain',$what).' title="'.$dom_in.'">Optin domain</a></li>
-			  <li><a href="opt_in_out.php?direction=in&amp;what=email"'.is_active2('in',$direction,'email',$what).' title="'.$email_in.'">Optin e-mail</a></li>
+				'title="'._("hosts/domains that are currently greylisted").'">'._("Waiting (greylist)").'</a></li>
+			  <li><a href="awl.php?mode=email" title="'._("auto-whitelisted e-mailadresses (that have passed greylisting)").'">'._("E-mail addresses").'</a></li>
+			  <li><a href="awl.php?mode=domains" title="'._("auto-whitelisted domains (that have passed greylisting)").'">'._("Domains").'</a></li>
+			  <li><a href="opt_in_out.php?direction=out&amp;what=domain"'.is_active2("out", $direction, "domain", $what).' title="'.$dom_out.'">'._("Optout domain").'</a></li>
+			  <li><a href="opt_in_out.php?direction=out&amp;what=email"'.is_active2("out", $direction, "email", $what).' title="'.$email_out.'">'._("Optout e-mail").'</a></li>
+			  <li><a href="opt_in_out.php?direction=in&amp;what=domain"'.is_active2('in',$direction,'domain',$what).' title="'.$dom_in.'">'._("Optin domain").'</a></li>
+			  <li><a href="opt_in_out.php?direction=in&amp;what=email"'.is_active2('in',$direction,'email',$what).' title="'.$email_in.'">'._("Optin e-mail").'</a></li>
 			</ul>
 		');
 	}

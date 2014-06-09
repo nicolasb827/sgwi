@@ -11,20 +11,21 @@ function add_sender($mode, $sendername, $senderdomain, $src) {
 	global $added;
 	if ($mode == "email") {
 		if ($sendername == '' || $senderdomain == '' || $src == '') {
-			$added = "<br />WARNING: Insufficient data - nothing was added !";
+			$added = "<br />"._("WARNING: Insufficient data - nothing was added !");
 		} else {
 			$query = "INSERT INTO from_awl(sender_name, sender_domain, src, first_seen, last_seen)
 				  VALUES('".addslashes($sendername)."', '".addslashes($senderdomain)."', '".addslashes($src)."', now(), now())";
-			$added = "<br />E-mail address ".$sendername."@".$senderdomain." (".$src.") added.";
+			$added = "<br />".printf(_("E-mail address %s (%s) added."), $sendername."@".$senderdomain, $src);
 			do_query($query);
 		}
 	} else {
 		if ($senderdomain == '' || $src == '') {
-			$added = "<br />WARNING: Insufficient data - nothing was added!";
+			$added = "<br />"._("WARNING: Insufficient data - nothing was added !");
 		} else {
 			$query = "INSERT INTO domain_awl(sender_domain, src, first_seen, last_seen)
 				  VALUES('".addslashes($senderdomain)."', '".addslashes($src)."', now(), now())";
-			$added = "<br />Domain ".$senderdomain." (".$src.") added.";
+			// TODO commit
+			$added = "<br />".printf(_("Domain %s (%s) added."), $senderdomain, $src);
 			do_query($query);
 		}
 	}
@@ -43,9 +44,10 @@ function delete_undef($mode) {
 	$n = fetch_row($result);
 	if ($n["count"] > 0) {
 		do_query($query);
-		$message = '<br />-undef- entries ('.$n["count"].') deleted.';
+		// TODO commit
+		$message = '<br />'.printf(_("-undef- entries (%d) deleted."), $n["count"]);
 	} else {
-		$message = "<br />No -undef- entries found - nothing was deleted.";
+		$message = "<br />"._("No -undef- entries found - nothing was deleted.");
 	}
 }
 
@@ -53,10 +55,10 @@ function delete_entry($mode, $sendername, $senderdomain, $src) {
 	global $deleted;
 	if ($mode == "email") {
 		$query = "DELETE FROM from_awl WHERE sender_name='".addslashes($sendername)."' AND sender_domain='".addslashes($senderdomain)."' AND src='".addslashes($src)."'";
-		$deleted .= "<br />".$sendername."@".$senderdomain." (".$src.") deleted.";
+		$deleted .= "<br />".printf(_("E-mail address %s (%s) deleted."), $sendername."@".$senderdomain, $src);
 	} else {
 		$query = "DELETE FROM domain_awl WHERE sender_domain='".addslashes($senderdomain)."' AND src='".addslashes($src)."'";
-		$deleted .= "<br />".$senderdomain." (".$src.") deleted.";
+		$deleted .= "<br />".printf(_("Domain %s (%s) deleted."), $senderdomain, $src);
 	}
 	do_query($query);
 }

@@ -26,7 +26,7 @@ Version: 	1.1.6
 	}
 	
 	//  Perform demanded action.
-	$clearit = '<br /><br /><a class="navlike" href="connect.php">Clear this report</a>';
+	$clearit = '<br /><br /><a class="navlike" href="connect.php">'._("Clear this report") . '</a>';
 	$report2 = "";
 	switch ($action) {
     		case "act":
@@ -36,7 +36,7 @@ Version: 	1.1.6
 	            		case "dodelete":
 			        // For batch deleting.
 					if ($chk == '') {
-						$report = '<br />Nothing was selected - nothing has been deleted.'.$clearit;
+						$report = '<br />'._("Nothing was selected - nothing has been deleted.").$clearit;
 					} else {
 						foreach ($chk as $args) {
 							$parts = explode("@@", $args);
@@ -48,7 +48,7 @@ Version: 	1.1.6
 				case "domove":
 			    	// For batch moving to whitelist.
 			        	if ($chk == '') {
-						$report = '<br />Nothing was selected - nothing has been moved.'.$clearit;
+						$report = '<br />' . _("Nothing was selected - nothing has been moved.").$clearit;
 					} else {
 						foreach ($chk as $args) {
 							$parts = explode("@@", $args);
@@ -58,7 +58,7 @@ Version: 	1.1.6
 					}
 					break;
 				case "":
-					$report = '<br />Please select Forget... or Move...';
+					$report = '<br />' . _("Please select Forget... or Move...");
 					break;
 			}
 	        	break;
@@ -106,7 +106,7 @@ Version: 	1.1.6
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="<?php echo $locale; ?>">
 
 <head>
 	<title>Greylisted hosts/domains</title>
@@ -124,7 +124,7 @@ Version: 	1.1.6
 	<table width="100%" border="0" summary="header">
             <tr>
 		<td>
-		    <h1>Greylisted hosts/domains (<?php echo $n["count"] . ")" ?></h1>
+		    <h1><?php echo _("Greylisted hosts/domains"); ?> (<?php echo $n["count"] . ")" ?></h1>
 		</td>
 		<td align="right">
 		    <a class="navlike" href="#end" title="End of List">EoL</a>
@@ -183,8 +183,8 @@ Version: 	1.1.6
 		<table width="100%" summary="options">
 	            <tr>
 			<td>
-			    <input type="radio" name="acttype" value="dodelete" /> Forget (delete) selected entries<br />
-			    <input type="radio" name="acttype" value="domove" /> Move selected entries to whitelist
+			    <input type="radio" name="acttype" value="dodelete" /> <?php echo _("Forget (delete) selected entries"); ?><br />
+			    <input type="radio" name="acttype" value="domove" /> <?php echo _("Move selected entries to whitelist"); ?>
 			</td>
 			<td align="right">
 			    <a class="navlike" href="#top" title="Top of List">ToL</a>

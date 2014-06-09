@@ -15,7 +15,7 @@ Version: 	1.1.6
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="<?php echo $locale; ?>">
 
 <head>
 	<title>SQLGrey Webinterface</title>
@@ -40,7 +40,7 @@ Version: 	1.1.6
 		<table width="820" border="0" summary="header">
 		    <tr>
 			<td>
-			    <h1>SQLGrey Webinterface (Main menu)</h1>
+			    <h1><?php echo _("SQLGrey Webinterface (Main menu)"); ?></h1>
 			</td>
 			<?php if ($close_btn == "yes") echo ('
 			<td align="right">
@@ -55,13 +55,13 @@ Version: 	1.1.6
 		<table border="0" summary="sub">
 			<tr>
 				<td colspan="3">
-				Hosts / domains that are currently greylisted: [<?php echo $line["count"]; ?>]
+				<?php echo _("Hosts / domains that are currently greylisted:"); ?> [<?php echo $line["count"]; ?>]
 				</td>
 			</tr>
 			<tr>
 				<td colspan="3">
 					<form action="connect.php" method="post">
-						<input style="width:150px;" type="submit" value="Waiting (greylist)" />
+						<input style="width:150px;" type="submit" value="<?php echo _("Waiting (greylist)"); ?>" />
 					</form>
 				</td>
 			</tr>
@@ -70,17 +70,17 @@ Version: 	1.1.6
 			</tr>
 			<tr>
 
-				<td colspan="3">Auto-whitelisted (hosts / domains that have passed greylisting)</td>
+				<td colspan="3"><?php echo _("Auto-whitelisted (hosts / domains that have passed greylisting)"); ?></td>
 			</tr>
 			<tr>
 				<td>
 					<form action="awl.php?mode=email" method="post">
-						<input type="submit" value="E-mail addresses" />
+						<input type="submit" value="<?php echo _("E-mail addresses"); ?>" />
 					</form>
 				</td>
 				<td>
 					<form action="awl.php?mode=domains" method="post">
-						<input type="submit" value="Domains" />
+						<input type="submit" value="<?php echo _("Domains"); ?>" />
 					</form>
 				</td>
 				<td width="40%">&nbsp;</td>
@@ -91,7 +91,7 @@ Version: 	1.1.6
 			<tr>
 				<td colspan="3">
 					<form action="opt_in_out.php?direction=out&amp;what=domain" method="post">
-						<input type="submit" value="Optout domain" />
+						<input type="submit" value="<?php echo _("Optout domain"); ?>" />
 						&nbsp;(<?php echo $dom_out; ?>)
 					</form>
 				</td>
@@ -102,7 +102,7 @@ Version: 	1.1.6
 			<tr>
 				<td colspan="3">
 					<form action="opt_in_out.php?direction=out&amp;what=email" method="post">
-						<input type="submit" value="Optout e-mail" />
+						<input type="submit" value="<?php echo _("Optout e-mail"); ?>" />
 						&nbsp;(<?php echo $email_out; ?>)
 					</form>
 				</td>
@@ -113,7 +113,7 @@ Version: 	1.1.6
 			<tr>
 				<td colspan="3">
 					<form action="opt_in_out.php?direction=in&amp;what=domain" method="post">
-						<input type="submit" value="Optin domain" />
+						<input type="submit" value="<?php echo _("Optin domain"); ?>" />
 						&nbsp;(<?php echo $dom_in; ?>)
 					</form>
 				</td>
@@ -124,7 +124,7 @@ Version: 	1.1.6
 			<tr>
 				<td colspan="3">
 					<form action="opt_in_out.php?direction=in&amp;what=email" method="post">
-						<input type="submit" value="Optin e-mail" />
+						<input type="submit" value="<?php echo _("Optin e-mail"); ?>" />
 						&nbsp;(<?php echo $email_in; ?>)
 					</form>
 				</td>

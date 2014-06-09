@@ -31,13 +31,13 @@ Version: 	1.1.6
 	}
 	
 	//  Perform demanded action.
-	$clearit = '<br /><br /><a class="navlike" href="awl.php?mode='.$mode.'">Clear this report</a>';
+	$clearit = '<br /><br /><a class="navlike" href="awl.php?mode='.$mode.'">'._("Clear this report").'</a>';
 	switch ($action) {
     		case "del_selection":
 	        	// For batch deleting.
 			(isset($_POST["chk"])) ? $chk = $_POST["chk"] : $chk = "";
 			if ($chk == "") {
-				$report = '<br />Nothing was selected - nothing has been deleted.'.$clearit;
+				$report = '<br />'._("Nothing was selected - nothing has been deleted.").$clearit;
 			} else {
 				foreach ($chk as $args) {
 					$parts = explode("@@", $args);
@@ -67,10 +67,10 @@ Version: 	1.1.6
 	//  Make a nice header.
 	if ($mode=="email") {
 		$query = "SELECT COUNT(*) AS count FROM from_awl";
-		$title = "e-mail addresses (";
+		$title = _("e-mail addresses")." (";
 	} else {
 		$query = "SELECT COUNT(*) AS count FROM domain_awl";
-		$title = "domains (";
+		$title = _("domains")." (";
 	}
 	$result = do_query($query);
 	$n = fetch_row($result);
@@ -101,10 +101,10 @@ Version: 	1.1.6
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="<?php echo $locale; ?>">
 
 <head>
-	<title>Whitelisted <?php if ($mode=="email") echo "e-mail addresses"; else echo "domains"; ?></title>
+	<title><?php echo _(sprintf ("Whitelisted %s", ($mode=="email" ? "e-mail addresses" : "domains"))); ?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="main.css" type="text/css" charset="utf-8" />
 </head>
@@ -199,10 +199,10 @@ Version: 	1.1.6
 		<table width="100%" summary="buttons">
 	            <tr>
 			<td>
-			    <input class="btn" type="submit" value="Delete selected entries" />
+			    <input class="btn" type="submit" value="<?php echo _("Delete selected entries"); ?>" />
 			</td>
 			<td align="right">
-			    <a class="navlike" href="#top" title="Top of List">ToL</a>
+			    <a class="navlike" href="#top" title="<?php echo _("Top of List"); ?>">ToL</a>
 			</td>
 		    </tr>
 		</table>
@@ -216,22 +216,22 @@ Version: 	1.1.6
 			<table width="100%" border="0" summary="add form">
 				<?php if ($mode == "email") { ?>
 				<tr>
-					<td width="120">Sender name:</td>
+					<td width="120"><?php echo _("Sender name"); ?>:</td>
 					<td width="240"><input class="txt" type="text" name="sender_name" /></td>
 					<td colspan="2">&nbsp;</td>
 				</tr>
 				<?php } ?>
 				<tr>
-					<td width="120">Sender domain:</td>
+					<td width="120"><?php echo _("Sender domain"); ?>:</td>
 					<td width="240"><input class="txt" type="text" name="sender_domain" /></td>
 					<td colspan="2">&nbsp;</td>
 				</tr>
 				<tr>
-					<td width="120">Source (class c or d):</td>
+					<td width="120"><?php echo _("Source (class c or d):"); ?></td>
 					<td width="240"><input class="txt" type="text" name="src" /></td>
-					<td align="left"><input class="btn" type="submit" value="Add" /></td>
+					<td align="left"><input class="btn" type="submit" value="<?php echo _("Add"); ?>" /></td>
 					<td align="right">
-					<a class="navlike" href="awl.php?mode=<?php echo $mode; ?>&amp;action=del_undef">Delete '-undef-' entries</a>
+					<a class="navlike" href="awl.php?mode=<?php echo _($mode); ?>&amp;action=del_undef"><?php echo _("Delete '-undef-' entries"); ?></a>
 					</td>
 				</tr>
 			</table>

@@ -1,0 +1,338 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.1.6-lcl\n"
+"POT-Creation-Date: 2014-06-09 22:06+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: nicolasb827 <nicolas.belan@gmail.com>\n"
+"Language-Team: fr\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: _\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: C:\\Users\\Nicolas\\workspace\\sgwi\\includes\n"
+"X-Poedit-SearchPath-1: C:\\Users\\Nicolas\\workspace\\sgwi\n"
+
+#: C:\Users\Nicolas\workspace\sgwi/awl.php:34
+#: C:\Users\Nicolas\workspace\sgwi/connect.php:29
+msgid "Clear this report"
+msgstr "Vider ce rapport"
+
+#: C:\Users\Nicolas\workspace\sgwi/awl.php:40
+#: C:\Users\Nicolas\workspace\sgwi/connect.php:39
+msgid "Nothing was selected - nothing has been deleted."
+msgstr "Rien a été sélectionné - rien a été supprimé"
+
+#: C:\Users\Nicolas\workspace\sgwi/awl.php:70
+#: C:\Users\Nicolas\workspace\sgwi/includes/opt_in_out.inc.php:26
+#: C:\Users\Nicolas\workspace\sgwi\includes/opt_in_out.inc.php:26
+msgid "e-mail addresses"
+msgstr "adresses mels"
+
+#: C:\Users\Nicolas\workspace\sgwi/awl.php:73
+#: C:\Users\Nicolas\workspace\sgwi/includes/opt_in_out.inc.php:21
+#: C:\Users\Nicolas\workspace\sgwi\includes/opt_in_out.inc.php:21
+msgid "domains"
+msgstr "domaines"
+
+#: C:\Users\Nicolas\workspace\sgwi/awl.php:202
+msgid "Delete selected entries"
+msgstr "Supprimer les entrées sélectionnées"
+
+#: C:\Users\Nicolas\workspace\sgwi/awl.php:205
+msgid "Top of List"
+msgstr "Haut de la liste"
+
+#: C:\Users\Nicolas\workspace\sgwi/awl.php:219
+msgid "Sender name"
+msgstr "Nom de l'émetteur"
+
+#: C:\Users\Nicolas\workspace\sgwi/awl.php:225
+msgid "Sender domain"
+msgstr "Domaine de l'émetteur"
+
+#: C:\Users\Nicolas\workspace\sgwi/awl.php:230
+msgid "Source (class c or d):"
+msgstr "Source (classe c ou d):"
+
+#: C:\Users\Nicolas\workspace\sgwi/awl.php:232
+msgid "Add"
+msgstr "Ajouter"
+
+#: C:\Users\Nicolas\workspace\sgwi/awl.php:234
+msgid "Delete '-undef-' entries"
+msgstr "Supprimer '-undef-' entrées"
+
+#: C:\Users\Nicolas\workspace\sgwi/connect.php:51
+msgid "Nothing was selected - nothing has been moved."
+msgstr "Rien a été sélectionné - rien a été déplacé."
+
+#: C:\Users\Nicolas\workspace\sgwi/connect.php:61
+msgid "Please select Forget... or Move..."
+msgstr "Merci de choisir Oublier... ou Déplacer..."
+
+#: C:\Users\Nicolas\workspace\sgwi/connect.php:127
+msgid "Greylisted hosts/domains"
+msgstr "Hôtes/domaines en liste grise"
+
+#: C:\Users\Nicolas\workspace\sgwi/connect.php:186
+msgid "Forget (delete) selected entries"
+msgstr "Oublier (supprimer) les entrées sélectionnées"
+
+#: C:\Users\Nicolas\workspace\sgwi/connect.php:187
+msgid "Move selected entries to whitelist"
+msgstr "Déplacer les entrées sélectionnées en liste blanche"
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/awl.inc.php:14
+#: C:\Users\Nicolas\workspace\sgwi/includes/awl.inc.php:23
+#: C:\Users\Nicolas\workspace\sgwi\includes/awl.inc.php:14
+#: C:\Users\Nicolas\workspace\sgwi\includes/awl.inc.php:23
+msgid "WARNING: Insufficient data - nothing was added !"
+msgstr "ATTENTION: Données manquantes - rien d'ajouté !"
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/awl.inc.php:18
+#: C:\Users\Nicolas\workspace\sgwi\includes/awl.inc.php:18
+#, php-format
+msgid "E-mail address %s (%s) added."
+msgstr "Le mel %s (%s) a été ajouté"
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/awl.inc.php:28
+#: C:\Users\Nicolas\workspace\sgwi\includes/awl.inc.php:28
+#, php-format
+msgid "Domain %s (%s) added."
+msgstr "Domaine %s (%s) ajouté."
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/awl.inc.php:48
+#: C:\Users\Nicolas\workspace\sgwi\includes/awl.inc.php:48
+#, php-format
+msgid "-undef- entries (%d) deleted."
+msgstr "-undef- entrées (%d) supprimées."
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/awl.inc.php:50
+#: C:\Users\Nicolas\workspace\sgwi\includes/awl.inc.php:50
+msgid "No -undef- entries found - nothing was deleted."
+msgstr "No -undef- entrées trouvées - rien a été supprimé."
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/awl.inc.php:58
+#: C:\Users\Nicolas\workspace\sgwi\includes/awl.inc.php:58
+#, php-format
+msgid "E-mail address %s (%s) deleted."
+msgstr "Mel %s (%s) supprimé."
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/awl.inc.php:61
+#: C:\Users\Nicolas\workspace\sgwi\includes/awl.inc.php:61
+#, php-format
+msgid "Domain %s (%s) deleted."
+msgstr "Domaine %s (%s) supprimé."
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/connect.inc.php:14
+#: C:\Users\Nicolas\workspace\sgwi\includes/connect.inc.php:14
+#, php-format
+msgid "%s [%d] for %s deleted."
+msgstr "%s [%d] pour %s supprimé."
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/connect.inc.php:33
+#: C:\Users\Nicolas\workspace\sgwi\includes/connect.inc.php:33
+#, php-format
+msgid "%s [%d] for %s moved to whitelist."
+msgstr "%s [%d] pour %s déplacé en liste blanche."
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/connect.inc.php:39
+#: C:\Users\Nicolas\workspace\sgwi\includes/connect.inc.php:39
+msgid "Aborted: invalid date."
+msgstr ""
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/connect.inc.php:44
+#: C:\Users\Nicolas\workspace\sgwi\includes/connect.inc.php:44
+#, php-format
+msgid "Entries older than %s deleted."
+msgstr ""
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/connect.inc.php:45
+#: C:\Users\Nicolas\workspace\sgwi\includes/connect.inc.php:45
+msgid "Sorting set to &#39;Seen at&#39; (ascending)."
+msgstr ""
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:19
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:19
+msgid "domains of recipients for whom messages are never greylisted"
+msgstr ""
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:20
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:20
+msgid "e-mail addresses of recipients for whom messages are never greylisted"
+msgstr ""
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:21
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:21
+msgid ""
+"domains of recipients for whom messages are always greylisted unless they "
+"are in the optout domain table"
+msgstr ""
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:22
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:22
+msgid ""
+"e-mail addresses of recipients for whom messages are always greylisted "
+"unless they are in the optout e-mail table"
+msgstr ""
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:30
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:38
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:30
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:38
+msgid "Could not connect to database"
+msgstr ""
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:31
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:31
+msgid "Could not select database"
+msgstr ""
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:33
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:40
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:33
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:40
+msgid "Query failed"
+msgstr ""
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:68
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:85
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:68
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:85
+msgid "hosts/domains that are currently greylisted"
+msgstr ""
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:68
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:85
+#: C:\Users\Nicolas\workspace\sgwi/index.php:64
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:68
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:85
+msgid "Waiting (greylist)"
+msgstr ""
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:70
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:86
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:70
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:86
+msgid "auto-whitelisted e-mailadresses (that have passed greylisting)"
+msgstr ""
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:70
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:86
+#: C:\Users\Nicolas\workspace\sgwi/index.php:78
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:70
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:86
+msgid "E-mail addresses"
+msgstr ""
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:72
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:87
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:72
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:87
+msgid "auto-whitelisted domains (that have passed greylisting)"
+msgstr ""
+"Liste blanche automatique des domaines (qui sont passés après une liste "
+"grise)"
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:73
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:88
+#: C:\Users\Nicolas\workspace\sgwi/index.php:94
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:73
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:88
+#, fuzzy
+msgid "Optout domain"
+msgstr "Domaine avec liste grise active"
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:74
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:89
+#: C:\Users\Nicolas\workspace\sgwi/index.php:105
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:74
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:89
+#, fuzzy
+msgid "Optout e-mail"
+msgstr "Mel avec liste grise active"
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:75
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:90
+#: C:\Users\Nicolas\workspace\sgwi/index.php:116
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:75
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:90
+#, fuzzy
+msgid "Optin domain"
+msgstr "Domaine sans liste grise active"
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:76
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:91
+#: C:\Users\Nicolas\workspace\sgwi/index.php:127
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:76
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:91
+#, fuzzy
+msgid "Optin e-mail"
+msgstr "Mel sans liste grise active"
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:83
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:83
+msgid "Main menu"
+msgstr "Menu principal"
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:87
+#: C:\Users\Nicolas\workspace\sgwi/index.php:83
+#: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:87
+msgid "Domains"
+msgstr "Domaines"
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/opt_in_out.inc.php:12
+#: C:\Users\Nicolas\workspace\sgwi\includes/opt_in_out.inc.php:12
+msgid "(recipients for whom messages are never greylisted)"
+msgstr "(destinataires dont les messages ne sont jamais en liste grise)"
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/opt_in_out.inc.php:16
+#: C:\Users\Nicolas\workspace\sgwi\includes/opt_in_out.inc.php:16
+msgid ""
+"(recipients for whom messages are always greylisted unless they are in the "
+msgstr ""
+"(destinataires dont les messages sont toujours en liste grise jusqu'à ce "
+"qu'il soient dans la"
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/opt_in_out.inc.php:22
+#: C:\Users\Nicolas\workspace\sgwi\includes/opt_in_out.inc.php:22
+msgid "optout domain table)"
+msgstr "table des domaines acceptés)"
+
+#: C:\Users\Nicolas\workspace\sgwi/includes/opt_in_out.inc.php:27
+#: C:\Users\Nicolas\workspace\sgwi\includes/opt_in_out.inc.php:27
+msgid "optout e-mail table)"
+msgstr "table des mails acceptés)"
+
+#: C:\Users\Nicolas\workspace\sgwi/index.php:43
+msgid "SQLGrey Webinterface (Main menu)"
+msgstr "Interface Web SQLGrey (Menu Principal)"
+
+#: C:\Users\Nicolas\workspace\sgwi/index.php:58
+msgid "Hosts / domains that are currently greylisted:"
+msgstr "Hôtes/domaines en liste grise:"
+
+#: C:\Users\Nicolas\workspace\sgwi/index.php:73
+msgid "Auto-whitelisted (hosts / domains that have passed greylisting)"
+msgstr ""
+"Liste blanche automatique (hôtes/domaines qui sont passés après une liste "
+"grise)"
+
+#: C:\Users\Nicolas\workspace\sgwi/opt_in_out.php:29
+#: C:\Users\Nicolas\workspace\sgwi/opt_in_out.php:38
+msgid "Nothing was entered."
+msgstr "Pas de données."
+
+#: C:\Users\Nicolas\workspace\sgwi/opt_in_out.php:32
+#, php-format
+msgid "%s deleted."
+msgstr "%s supprimé."
+
+#: C:\Users\Nicolas\workspace\sgwi/opt_in_out.php:41
+#, php-format
+msgid "%s added."
+msgstr "%s ajouté."
