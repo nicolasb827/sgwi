@@ -143,28 +143,32 @@ msgstr "%s [%d] pour %s déplacé en liste blanche."
 #: C:\Users\Nicolas\workspace\sgwi/includes/connect.inc.php:39
 #: C:\Users\Nicolas\workspace\sgwi\includes/connect.inc.php:39
 msgid "Aborted: invalid date."
-msgstr ""
+msgstr "Annulé: date non valide"
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/connect.inc.php:44
 #: C:\Users\Nicolas\workspace\sgwi\includes/connect.inc.php:44
 #, php-format
 msgid "Entries older than %s deleted."
-msgstr ""
+msgstr "Les entrées plus vieilles que %s sont supprimées."
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/connect.inc.php:45
 #: C:\Users\Nicolas\workspace\sgwi\includes/connect.inc.php:45
 msgid "Sorting set to &#39;Seen at&#39; (ascending)."
-msgstr ""
+msgstr "Tri positionné à &#39;Vu à &#39; (ascendant)."
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:19
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:19
 msgid "domains of recipients for whom messages are never greylisted"
 msgstr ""
+"Domaines des destinataires pour qui les messages ne sont jamais placés en "
+"liste grise."
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:20
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:20
 msgid "e-mail addresses of recipients for whom messages are never greylisted"
 msgstr ""
+"Adresse mél des destinataires pour qui les messages ne sont jamais placés en "
+"liste grise."
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:21
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:21
@@ -172,6 +176,8 @@ msgid ""
 "domains of recipients for whom messages are always greylisted unless they "
 "are in the optout domain table"
 msgstr ""
+"Domaines des destinataires pour qui les messages ne sont tout le temps "
+"placés en liste grise sauf s'ils sont dans la table des désinscrits"
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:22
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:22
@@ -179,32 +185,34 @@ msgid ""
 "e-mail addresses of recipients for whom messages are always greylisted "
 "unless they are in the optout e-mail table"
 msgstr ""
+"Méls des destinataires pour qui les messages ne sont tout le temps placés en "
+"liste grise sauf s'ils sont dans la table des désinscrits"
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:30
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:38
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:30
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:38
 msgid "Could not connect to database"
-msgstr ""
+msgstr "Impossible de se connecter à la base de données"
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:31
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:31
 msgid "Could not select database"
-msgstr ""
+msgstr "Impossible d'interroger la base de données"
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:33
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:40
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:33
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:40
 msgid "Query failed"
-msgstr ""
+msgstr "La requête a échouée"
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:68
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:85
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:68
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:85
 msgid "hosts/domains that are currently greylisted"
-msgstr ""
+msgstr "Hôtes/domaines qui sont actuellement en liste grise"
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:68
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:85
@@ -212,7 +220,7 @@ msgstr ""
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:68
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:85
 msgid "Waiting (greylist)"
-msgstr ""
+msgstr "En attente (liste grise)"
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:70
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:86
@@ -220,6 +228,7 @@ msgstr ""
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:86
 msgid "auto-whitelisted e-mailadresses (that have passed greylisting)"
 msgstr ""
+"mél en liste blanche automatique (awl - celles qui ont passé la liste grise)"
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:70
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:86

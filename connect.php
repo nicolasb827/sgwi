@@ -88,8 +88,8 @@ Version: 	1.1.6
 	}
 	
 	// For the header.
-	$query = "SELECT COUNT(*) AS count FROM connect";
-	$result = do_query($query);
+	$query = "SELECT COUNT(*) AS count FROM connect WHERE rcpt = '%s'";
+	$result = do_query($query, $remote_user);
 	$n = fetch_row($result);
 	
 	/* mysql> describe connect;
@@ -109,7 +109,7 @@ Version: 	1.1.6
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="<?php echo $locale; ?>">
 
 <head>
-	<title>Greylisted hosts/domains</title>
+	<title>_("Greylisted hosts/domains")</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="main.css" type="text/css" charset="utf-8" />
 </head>
@@ -154,8 +154,8 @@ Version: 	1.1.6
 				  $order = "sender_domain ".$dir.", sender_name ".$dir;
 				else
 				  $order = $sort." ".$dir;
-				$query = "SELECT sender_name, sender_domain, src, rcpt, first_seen FROM connect ORDER BY ".$order;
-				$result = do_query($query);
+				$query = "SELECT sender_name, sender_domain, src, rcpt, first_seen FROM connect WHERE rcpt = '%s' ORDER BY ".$order;
+				$result = do_query($query, $remote_user);
 				while($line = fetch_row($result)) {
 					$sn = $line["sender_name"];
 					$sd = $line["sender_domain"];

@@ -34,8 +34,8 @@ function add_sender($mode, $sendername, $senderdomain, $src) {
 function delete_undef($mode) {
 	global $message;
 	if ($mode == "email") {
-		$query_cnt = "SELECT COUNT(*) AS count FROM from_awl WHERE sender_name='-undef-' AND sender_domain='-undef-'";
-		$query = "DELETE FROM from_awl WHERE sender_name='-undef-' AND sender_domain='-undef-'";
+		$query_cnt = "SELECT COUNT(*) AS count FROM from_awl WHERE sender_name='-undef-' AND sender_domain='-undef-' AND RCPT = '%s'";
+		$query = "DELETE FROM from_awl WHERE sender_name='-undef-' AND sender_domain='-undef-' AND RCPT = '%s'";
 	} else {
 		$query_cnt = "SELECT COUNT(*) AS count FROM domain_awl WHERE sender_domain='-undef-'";
 		$query = "DELETE FROM domain_awl WHERE sender_domain='-undef-'";

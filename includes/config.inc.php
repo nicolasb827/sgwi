@@ -30,4 +30,6 @@ $close_btn	= "yes";
 */
 $no_millisecs	= "yes";
 $locale = "fr";
+$remote_user = "%"; // for compat .. $_SERVER['REMOTE_USER']
+
 ?>

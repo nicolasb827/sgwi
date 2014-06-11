@@ -36,14 +36,18 @@ $email_in = _('e-mail addresses of recipients for whom messages are always greyl
 
 // Database functions.
 
-function do_query($query) {
+function do_query($query, $arg = "") {
         global $db_hostname, $db_user, $db_pass, $db_db, $db_type;
         /* Connecting, selecting database */
 	if ($db_type == "mysql") {
 		$link = mysql_connect($db_hostname, $db_user, $db_pass) or die(_("Could not connect to database"));
 		mysql_select_db($db_db) or die(_("Could not select database"));
-
-		$result = mysql_query($query) or die(_("Query failed"));
+		if ($arg != "") {
+			$st = sprintf($query, mysql_real_escape_string($arg));
+			$result = mysql_query($query) or die(_("Query failed")); 			
+		} else {
+			$result = mysql_query($query) or die(_("Query failed"));
+		}
 
 		/* Closing connection */
 		mysql_close($link);
