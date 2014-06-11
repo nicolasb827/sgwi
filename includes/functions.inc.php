@@ -9,12 +9,25 @@ Version: 	1.1.6-lcl
 
 require "config.inc.php";
 
-// Globally used phrases.
-if (isSet($_GET["locale"]))
-	$locale = $_GET["locale"];
-putenv("LC_ALL=$locale");
+if (isset($_GET["locale"])) {
+   $locale = $_GET["locale"];
+ }
+ else if (isset($_SESSION["locale"])) {
+   $locale  = $_SESSION["locale"];
+ }
+ else {
+   $locale = "fr_FR";
+ }
+
+putenv("LANG=" . $locale); 
 setlocale(LC_ALL, $locale);
-bindtextdomain("messages", "./locale");
+
+
+$domain = "sqlgreywebui";
+bindtextdomain($domain, dirname(__FILE__)."/../locale");
+bind_textdomain_codeset($domain, 'UTF-8');
+
+textdomain($domain);
 
 $dom_out = _('domains of recipients for whom messages are never greylisted');
 $email_out = _('e-mail addresses of recipients for whom messages are never greylisted');

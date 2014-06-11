@@ -227,7 +227,7 @@ msgstr ""
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:70
 #: C:\Users\Nicolas\workspace\sgwi\includes/functions.inc.php:86
 msgid "E-mail addresses"
-msgstr ""
+msgstr "Adresses mél"
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:72
 #: C:\Users\Nicolas\workspace\sgwi/includes/functions.inc.php:87
@@ -296,7 +296,7 @@ msgid ""
 "(recipients for whom messages are always greylisted unless they are in the "
 msgstr ""
 "(destinataires dont les messages sont toujours en liste grise jusqu'à ce "
-"qu'il soient dans la"
+"qu'il soient dans la "
 
 #: C:\Users\Nicolas\workspace\sgwi/includes/opt_in_out.inc.php:22
 #: C:\Users\Nicolas\workspace\sgwi\includes/opt_in_out.inc.php:22
